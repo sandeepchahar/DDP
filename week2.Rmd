@@ -1,0 +1,35 @@
+---
+title: "week2"
+author: "Sandeep Chahar"
+date: "23/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## LEAFLET
+```{r MAP}
+library(leaflet)
+map <- leaflet()
+```
+
+
+
+MARKERS ON THE MAP
+```{r}
+a <- c("<a href='https://en.wikipedia.org/wiki/Amer_Fort'>AMER FORT<br></a>")
+b <- c("<a href= 'https://en.wikipedia.org/wiki/Nahargarh_Fort>NAHARGARH FORT<br></a>")
+c <- c("<a href='https://en.wikipedia.org/wiki/Hawa_Mahal'>HAWA MAHAL<br></a>")
+d<-c("<a https://en.wikipedia.org/wiki/Jal_Mahal'> JAL MAHAL<br></a>")
+e<-c("<a https://en.wikipedia.org/wiki/Amer_Fort'>AMBER PALACE<br></a>")
+map %>%
+  addTiles() %>%
+   addMarkers(lat=26.9880,lng=75.8610,popup = a) %>%
+   addMarkers(lat=26.9373, lng=75.8155, popup =b) %>%
+   addMarkers(lat=26.9239,lng =75.8267 ,popup = c) %>%
+   addMarkers(lat=26.9537,lng = 75.8463,popup = d) %>%
+   addMarkers(lat=26.9855,lng=75.8513,popup = e)
+```
+ 
