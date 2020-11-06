@@ -1,0 +1,39 @@
+---
+title: "project_week3"
+author: "Sandeep Chahar"
+date: "06/11/2020"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.table.format = "html") 
+```
+
+PLOTY
+
+----
+plot of  'Mil/gal' vs 'We.(thousand pounds)','cylinder numbers'
+
+```{r, echo=FALSE}
+library(plotly)
+```
+
+```{r, echo=TRUE}
+f <- list(
+  fa = "coo nw,p",
+  size = 11,   color = "#ffff00")
+x <- list(
+  t = "Wt (900 lbs)")
+y <- list(
+  t= "Mil/gal" )
+```
+
+Plot
+----
+```{r , echo=FALSE}
+plot_ly(mtcars, y = mtcars$wt, x=mtcars$mpg ) %>%   
+        layout(hori=x, verti=y)
+```
+
