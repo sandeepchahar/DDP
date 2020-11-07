@@ -1,0 +1,26 @@
+---
+title: "PLotly week 3"
+author: "Sandeep Chahar"
+date: "07/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r data file}
+Home_data <- read.csv("D:/homes.csv")
+head(Home_data)
+```
+## installing plotly package and plotting graph
+A graph is plotted for the age of the house and taxes according to the data in the csv file 'HOME' whose data was extracted to the Home_data. X axis represents the taxes and y axis represents the age of the house.
+```{r plot, echo=TRUE}
+library(plotly)
+
+```
+```{r plot1, echo=TRUE}
+PLottinggraph <- plot_ly(data=Home_data, x = Home_data$Taxes, y = Home_data$Age, Title='Home taxes according number of age in house')
+PLottinggraph
+```
